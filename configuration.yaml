@@ -27,7 +27,7 @@ http:
     - 172.19.0.0/16
   login_attempts_threshold: 3
 
-history: !include include/history.yaml
+  #history: !include include/history.yaml
 
 # Discover some devices automatically
 discovery:
