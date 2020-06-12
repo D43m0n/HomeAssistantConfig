@@ -103,11 +103,7 @@
       - sensor.dsmr_meter_stats_power_failure_count
       - sensor.dsmr_meter_stats_long_power_failure_count
       - sensor.dsmr_meter_stats_voltage_sag_count_l1
-      - sensor.dsmr_meter_stats_voltage_sag_count_l2
-      - sensor.dsmr_meter_stats_voltage_sag_count_l3
       - sensor.dsmr_meter_stats_voltage_swell_count_l1
-      - sensor.dsmr_meter_stats_voltage_swell_count_l2
-      - sensor.dsmr_meter_stats_voltage_swell_count_l3
       - sensor.dsmr_meter_stats_rejected_telegrams
 
   climate:
