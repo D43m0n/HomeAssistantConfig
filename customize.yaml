@@ -1,0 +1,128 @@
+  media_player.keuken_main:
+    friendly_name: Luidspreker in de keuken
+
+  sensor.shelly_1pm_608eea_energy:
+    friendly_name: Hanglamp energie
+
+  sensor.shelly_1pm_608eea_power:
+    friendly_name: Hanglamp vermogen
+
+  sensor.shelly_plug_s_0417ec_energy:
+    friendly_name: Koelkast energie
+
+  sensor.shelly_plug_s_0417ec_power:
+    friendly_name: Koelkast vermogen
+
+  sensor.shelly_plug_s_7ae6df_energy:
+    friendly_name: Sfeerhaard energie
+
+  sensor.shelly_plug_s_7ae6df_power:
+    friendly_name: Sfeerhaard vermogen
+
+  sensor.shelly_plug_s_79d7e8_energy:
+    friendly_name: Diepvries energie
+
+  sensor.shelly_plug_s_79d7e8_power:
+    friendly_name: Diepvries vermogen
+
+  sensor.shelly_ht_b89774_temperature:
+    friendly_name: Woonkamer temperatuur
+
+  sensor.shelly_ht_b89774_humidity:
+    friendly_name: Woonkamer luchtvochtigheid
+
+  sensor.shelly_ht_b89774_battery:
+    friendly_name: Woonkamer batterij status sensor
+
+  sensor.shelly_ht_b8954a_temperature:
+    friendly_name: Buiten temperatuur
+
+  sensor.shelly_ht_b8954a_humidity:
+    friendly_name: Buiten luchtvochtigheid
+
+  sensor.shelly_ht_b8954a_battery:
+    friendly_name: Buiten batterij status sensor
+
+  switch.shelly_1pm_608eea:
+    friendly_name: Hanglamp
+
+  switch.shelly_plug_s_0417ec:
+    friendly_name: Koelkast
+
+  switch.shelly_plug_s_7ae6df:
+    friendly_name: Sfeerhaard
+
+  switch.shelly_plug_s_79d7e8:
+    friendly_name: Diepvries
+
+  switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch:
+    friendly_name: Fibaro Wall Plug
+
+  sensor.power_production:
+    hidden: true
+
+  sensor.power_production_low:
+    hidden: true
+
+  sensor.power_production_normal:
+    hidden: true
+
+  sensor.power_production_phase_l1:
+    hidden: true
+
+  sensor.power_production_phase_l2:
+    hidden: true
+
+  sensor.power_production_phase_l3:
+    hidden: true
+
+  sensor.power_consumption_phase_l2:
+    hidden: true
+
+  sensor.power_consumption_phase_l3:
+    hidden: true
+
+  sensor.voltage_phase_l2:
+    hidden: true
+
+  sensor.voltage_phase_l3:
+    hidden: true
+
+  sensor.voltage_sags_phase_l2:
+    hidden: true
+
+  sensor.voltage_sags_phase_l3:
+    hidden: true
+
+  sensor.voltage_swells_phase_l2:
+    hidden: true
+
+  sensor.voltage_swells_phase_l3:
+    hidden: true
+
+  sensor.iphone_van_dennis_battery_level_3:
+    hidden: true
+
+  sensor.iphone_van_dennis_battery_state_2:
+    hidden: true
+
+  sensor.fibaro_system_fgwpe_f_wall_plug_gen5_exporting:
+    hidden: true
+
+  sensor.fibaro_system_fgwpe_f_wall_plug_gen5_alarm_type:
+    hidden: true
+
+  sensor.fibaro_system_fgwpe_f_wall_plug_gen5_alarm_level:
+    hidden: true
+
+  sensor.fibaro_system_fgwpe_f_wall_plug_gen5_sourcenodeid:
+    hidden: true
+
+  sensor.fibaro_system_fgwpe_f_wall_plug_gen5_power_management:
+    hidden: true
+
+  person.dennis:
+    entity_picture: "/local/dennis.jpg"
+
+  person.nicole:
+    entity_picture: "/local/nicole.jpg"

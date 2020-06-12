@@ -1,0 +1,24 @@
+  - name: !secret zone_home_name
+    latitude: !secret zone_home_latitude
+    longitude: !secret zone_home_longitude
+    radius: !secret zone_home_radius
+    icon: mdi:home
+
+  - name: !secret zone_outside_primary_name
+    latitude: !secret zone_outside_primary_latitude
+    longitude: !secret zone_outside_primary_longitude
+    radius: !secret zone_outside_primary_radius
+    icon: mdi:account-multiple
+
+  - name: !secret zone_outside_secondary_name
+    latitude: !secret zone_outside_secondary_latitude
+    longitude: !secret zone_outside_secondary_longitude
+    radius: !secret zone_outside_secondary_radius
+    icon: mdi:account-multiple
+
+  - name: !secret zone_outside_tertiary_name
+    latitude: !secret zone_outside_tertiary_latitude
+    longitude: !secret zone_outside_tertiary_longitude
+    radius: !secret zone_outside_tertiary_radius
+    icon: mdi:school
+

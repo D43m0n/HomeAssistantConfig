@@ -1,0 +1,113 @@
+  - platform: dsmr_reader
+
+  - platform: filter
+    name: "Stroomverbruik laag tarief"
+    entity_id: sensor.dsmr_reading_electricity_delivered_1
+    filters:
+      - filter: throttle
+        window_size: 10
+
+  - platform: filter
+    name: "Stroomverbruik normaal tarief"
+    entity_id: sensor.dsmr_reading_electricity_delivered_2
+    filters:
+      - filter: throttle
+        window_size: 10
+
+  - platform: filter
+    name: "Actueel stroomverbruik"
+    entity_id: sensor.dsmr_reading_electricity_currently_delivered
+    filters:
+      - filter: throttle
+        window_size: 10
+
+  - platform: filter
+    name: "Dagelijks stroomverbuik normaal tarief"
+    entity_id: sensor.dsmr_day_consumption_electricity2
+    filters:
+      - filter: throttle
+        window_size: 10
+
+  - platform: filter
+    name: "Dagelijks stroomverbuik daltarief"
+    entity_id: sensor.dsmr_day_consumption_electricity1
+    filters:
+      - filter: throttle
+        window_size: 10
+
+  - platform: mqtt
+    name: "Shelly 1PM 608EEA Power"
+    state_topic: "shellies/shelly1pm-608EEA/relay/0/power"
+    unit_of_measurement: "Watts"
+    
+  - platform: mqtt
+    name: "Shelly 1PM 608EEA Energy"
+    state_topic: "shellies/shelly1pm-608EEA/relay/0/energy" 
+    value_template: "{{ value | float * 0.000017 }}"
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    name: "Shelly Plug S 7AE6DF Power"
+    state_topic: "shellies/shellyplug-s-7AE6DF/relay/0/power"
+    unit_of_measurement: "Watts"
+    
+  - platform: mqtt
+    name: "Shelly Plug S 7AE6DF Energy"
+    state_topic: "shellies/shellyplug-s-7AE6DF/relay/0/energy" 
+    value_template: "{{ value | float * 0.000017 }}"
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    name: "Shelly Plug S 0417EC Power"
+    state_topic: "shellies/shellyplug-s-0417EC/relay/0/power"
+    unit_of_measurement: "Watts"
+    
+  - platform: mqtt
+    name: "Shelly Plug S 0417EC Energy"
+    state_topic: "shellies/shellyplug-s-0417EC/relay/0/energy" 
+    value_template: "{{ value | float * 0.000017 }}"
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    name: "Shelly Plug S 79D7E8 Power"
+    state_topic: "shellies/shellyplug-s-79D7E8/relay/0/power"
+    unit_of_measurement: "Watts"
+    
+  - platform: mqtt
+    name: "Shelly Plug S 79D7E8 Energy"
+    state_topic: "shellies/shellyplug-s-79D7E8/relay/0/energy" 
+    value_template: "{{ value | float * 0.000017 }}"
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    name: "Shelly HT B89774 temperature"
+    state_topic: "shellies/shellyht-B89774/sensor/temperature"
+    unit_of_measurement: "°C"
+    
+  - platform: mqtt
+    name: "Shelly HT B89774 humidity"
+    state_topic: "shellies/shellyht-B89774/sensor/humidity"
+    unit_of_measurement: "%"
+    
+  - platform: mqtt
+    name: "Shelly HT B89774 battery"
+    state_topic: "shellies/shellyht-B89774/sensor/battery"
+    unit_of_measurement: "%"
+    
+  - platform: mqtt
+    name: "Shelly HT B8954A temperature"
+    state_topic: "shellies/shellyht-B8954A/sensor/temperature"
+    unit_of_measurement: "°C"
+    
+  - platform: mqtt
+    name: "Shelly HT B8954A humidity"
+    state_topic: "shellies/shellyht-B8954A/sensor/humidity"
+    unit_of_measurement: "%"
+    
+  - platform: mqtt
+    name: "Shelly HT B8954A battery"
+    state_topic: "shellies/shellyht-B8954A/sensor/battery"
+    unit_of_measurement: "%"
+    
+
+

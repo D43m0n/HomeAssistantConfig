@@ -1,0 +1,103 @@
+- id: '1576248771931'
+  alias: Shelly Plug bij sfeerhaard aan
+  trigger:
+  - entity_id: light.woonkamer
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - entity_id: switch.shelly_plug_s_7ae6df
+    service: switch.turn_on
+- id: '1576249568285'
+  alias: Shelly Plug bij sfeerhaard uit
+  trigger:
+  - entity_id: light.woonkamer
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - entity_id: switch.shelly_plug_s_7ae6df
+    service: switch.turn_off
+- id: '1590256194941'
+  alias: Waarschuwing Batterij Shelly HT Buiten
+  trigger:
+  - below: '20'
+    entity_id: sensor.shelly_ht_b8954a_battery
+    for:
+      hours: 8
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      message: De batterij van de Shelly HT Buiten heeft < 20% lading.
+      title: Batterij Shelly HT Buiten minder dan 20%
+    service: notify.mobile_app_iphone_van_dennis
+- id: '1590256760870'
+  alias: Waarschuwing batterij iPhone Nicole minder dan 37%
+  trigger:
+  - below: '37'
+    entity_id: sensor.battery_level_4
+    for: 0:02:00
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      message: De accu van de iPhone van Nicole heeft < 37% lading.
+      title: Accu iPhone van Nicole laag
+    service: notify.mobile_app_iphone_van_dennis
+- id: '1590257138342'
+  alias: ' Waarschuwing Batterij Shelly HT Buiten'
+  trigger:
+  - below: '20'
+    entity_id: sensor.shelly_ht_b89774_battery
+    for:
+      hours: 8
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      message: De batterij van de Shelly HT Woonkamer heeft < 20% lading.
+      title: Batterij Shelly HT Woonkamer minder dan 20%
+    service: notify.mobile_app_iphone_van_dennis
+- id: '1590257621165'
+  alias: Waarschuwing batterij Hue Dimmer Woonkamer
+  trigger:
+  - below: '20'
+    entity_id: sensor.dimmer_woonkamer_battery_level
+    for:
+      hours: 1
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      message: De batterij van de Hue Dimmer Woonkamer heeft < 20% lading.
+      title: Batterij Hue Dimmer Woonkamer minder dan 20%
+    service: notify.mobile_app_iphone_van_dennis
+- id: '1590257764955'
+  alias: Waarschuwing batterij Hue Dimmer Keuken
+  trigger:
+  - below: '20'
+    entity_id: sensor.keuken_schakelaar_battery_level
+    for:
+      hours: 1
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      message: De batterij van de Hue Dimmer Keuken heeft < 20% lading.
+      title: Batterij Hue Dimmer Keuken minder dan 20%
+    service: notify.mobile_app_iphone_van_dennis
+- id: '1591347283396'
+  alias: Bericht sturen als het buiten warmer is dan binnen
+  trigger:
+    platform: template
+    value_template: "{{ states('sensor.shelly_ht_b8954a_temperature') | float > states('sensor.shelly_ht_b89774_temperature') | float }}"
+  action:
+  - data:
+      message: Het is nu buiten {{ states.sensor.shelly_ht_b8954a_temperature.state
+        }} graden, binnen is het nu {{ states.sensor.shelly_ht_b89774_temperature.state
+        }} graden.
+      title: Buiten warmer dan binnen!
+    service: notify.mobile_app_iphone_van_dennis

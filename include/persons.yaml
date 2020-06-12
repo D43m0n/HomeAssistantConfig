@@ -1,0 +1,4 @@
+  - name: !secret primary_name
+    id: !secret primary_id
+    device_trackers:
+      - !secret: primary_device_tracker

@@ -1,0 +1,19 @@
+  - platform: kodi                                                                                                                                                                                          
+    host: kodi.thuis                                                                                                                                                                                        
+    username: !secret kodi_username                                                                                                                                                                         
+    password: !secret kodi_password                                                                                                                                                                         
+    turn_on_action:                                                                                                                                                                                         
+      - service: wake_on_lan.send_magic_packet                                                                                                                                                              
+        data:                                                                                                                                                                                               
+          mac: 18:03:73:1a:5b:9a                                                                                                                                                                            
+          broadcast_address: 192.168.1.255                                                                                                                                                                  
+    turn_off_action:                                                                                                                                                                                        
+      service: media_player.kodi_call_method                                                                                                                                                                
+      data:                                                                                                                                                                                                 
+        entity_id: media_player.kodi                                                                                                                                                                        
+        method: System.Shutdown                                                                                                                                                                             
+  - platform: yamaha                                                                                                                                                                                        
+    host: yamahareceiver.thuis                                                                                                                                                                              
+    name: RX-V479 Receiver
+  - platform: yamaha_musiccast                                                                                                                                                                              
+    host: yamahawx030.thuis  

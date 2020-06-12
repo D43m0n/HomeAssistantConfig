@@ -1,0 +1,137 @@
+  verlichting:
+    name: Verlichting
+    #    view: true
+    entities:
+      - group.hue_rooms
+      - group.hue_lights
+
+  hue_rooms:
+    name: Ruimtes volgens Hue
+    #    view: false
+    entities:
+      - light.woonkamer
+      - light.werkkamer
+      - light.aanrecht
+      - light.eetkamer
+
+  hue_lights:
+    name: Individuele Hue lampen
+    #    view: false
+    entities:
+      - light.staande_lamp
+      - light.tafellamp
+      - light.bronzen_lamp
+      - light.lamp_op_de_werkkamer
+      - light.dimmable_light_1
+      - light.dimmable_light_1_2
+      - light.hue_ambiance_panel_1
+      - light.on_off_plug_1
+      - light.on_off_plug_1_2
+
+  entertainment:
+    name: Entertainment
+    #    view: true
+    entities:
+      - group.mediaplayers
+      - group.audio
+
+  mediaplayers:
+    name: Mediaspelers
+    #    view: false
+    entities:
+      - media_player.kodi
+
+  audio:
+    name: Audio apparatuur
+    #    view: false
+    entities:
+      - media_player.rx_v479_receiver
+      - media_player.keuken_main
+
+  people:
+    name: Personen
+    #view: true
+    entities:
+      - !secret primary_entity
+      - !secret secondary_entity
+
+  energy:
+    name: Energie
+    entities:
+      - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_power
+      - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_energy
+      - sensor.shelly_1pm_608eea_energy
+      - sensor.shelly_1pm_608eea_power
+      - sensor.shelly_plug_s_0417ec_energy
+      - sensor.shelly_plug_s_0417ec_power
+      - sensor.shelly_plug_s_7ae6df_energy
+      - sensor.shelly_plug_s_7ae6df_power
+      - sensor.shelly_plug_s_79d7e8_energy
+      - sensor.shelly_plug_s_79d7e8_power
+
+  dsmr_stroom:
+    name: Slimme Meter stroomverbruik
+    entities:
+      - sensor.actueel_stroomverbruik
+      - sensor.dsmr_meter_stats_electricity_tariff
+      - sensor.stroomverbruik_normaal_tarief
+      - sensor.stroomverbruik_laag_tarief
+
+  dsmr_gas:
+    name: Slimme Meter gasverbruik
+    entities:
+      - sensor.dsmr_consumption_gas_delivered
+      - sensor.dsmr_consumption_gas_currently_delivered
+      - sensor.dsmr_consumption_gas_read_at
+
+  dsmr_dailystats:
+    name: Slimme Meter dagstatistieken
+    entities:
+      - sensor.dsmr_day_consumption_electricity1
+      - sensor.dsmr_day_consumption_electricity2
+      - sensor.dsmr_day_consumption_electricity1_cost
+      - sensor.dsmr_day_consumption_electricity2_cost
+      - sensor.dsmr_day_consumption_gas
+      - sensor.dsmr_day_consumption_gas_cost
+      - sensor.dsmr_day_consumption_total_cost
+
+  dsmr_meterstats:
+    name: Slimme Meter meterstatistieken
+    entities:
+      - sensor.dsmr_meter_stats_dsmr_version
+      - sensor.dsmr_meter_stats_electricity_tariff
+      - sensor.dsmr_meter_stats_power_failure_count
+      - sensor.dsmr_meter_stats_long_power_failure_count
+      - sensor.dsmr_meter_stats_voltage_sag_count_l1
+      - sensor.dsmr_meter_stats_voltage_sag_count_l2
+      - sensor.dsmr_meter_stats_voltage_sag_count_l3
+      - sensor.dsmr_meter_stats_voltage_swell_count_l1
+      - sensor.dsmr_meter_stats_voltage_swell_count_l2
+      - sensor.dsmr_meter_stats_voltage_swell_count_l3
+      - sensor.dsmr_meter_stats_rejected_telegrams
+
+  climate:
+    name: Klimaat
+    #view: true
+    entities:
+      - sensor.shelly_ht_b89774_temperature
+      - sensor.shelly_ht_b89774_humidity
+      - sensor.shelly_ht_b8954a_temperature
+      - sensor.shelly_ht_b8954a_humidity
+
+  battery:
+    name: Batterijen
+    #view: true
+    entities:
+      - sensor.shelly_ht_b89774_battery
+      - sensor.shelly_ht_b8954a_battery
+      - sensor.dimmer_woonkamer_battery_level
+      - sensor.keuken_schakelaar_battery_level
+
+  weather:
+    name: Weer
+    #view: true
+    entities:
+      #      - weather.lokaalweer
+      - sun.sun
+

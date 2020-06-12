@@ -1,0 +1,30 @@
+# You can whitelist files/folders with !, these will not be ignored.
+!*.yaml
+!.gitignore
+!*.md
+
+# Ignore folders.
+.storage
+.cloud
+.google.token
+www/*.jpg
+
+# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
+
+# Ignore swp files from vim.
+*.swp
+
+# Ignore the database (SQLite)
+home-assistant_v2.db
+home-assistant_v2.db*
+pyozw.sqlite
+
+# Ignore automatically updating files, not part of the config:
+.ios.conf
+OZW_Log.txt
+zwscene.xml
+zwcfg*.xml
+home-assistant.log
