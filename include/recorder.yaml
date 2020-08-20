@@ -1,120 +1,124 @@
-  exclude:
+  auto_purge: true
+  include:
     domains:
-      - media_player
-      - device_tracker
-      - updates
-      - weather
-      - sun
-    entities:
-      - sensor.gas_consumption
-      - sensor.power_consumption_phase_l1
-      - sensor.power_consumption
-      - sensor.voltage_phase_l1
-      - sensor.voltage_sags_phase_l1
-      - sensor.voltage_swells_phase_l1
-      - sensor.hourly_gas_consumption
-      - sensor.long_power_failure_count
-      - sensor.power_tariff
-      - sensor.daily_gas
-      - sensor.daily_power_offpeak
-      - sensor.daily_power_peak
-      - sensor.monthly_gas
-      - sensor.monthly_power_offpeak
-      - sensor.monthly_power_peak
-      - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_exporting                                                                                                                                               
-      - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_alarm_type                                                                                                                                              
-      - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_alarm_level                                                                                                                                             
-      - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_sourcenodeid                                                                                                                                            
-      - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_power_management                                                                                                                                        
-      - sensor.iphone_van_dennis_battery_level_3                                                                                                                                                            
-      - sensor.iphone_van_dennis_battery_state_2                                                                                                                                                            
-      - sensor.power_consumption_phase_l2                                                                                                                                                                   
-      - sensor.power_consumption_phase_l3                                                                                                                                                                   
-      - sensor.power_production                                                                                                                                                                             
-      - sensor.power_production_low                                                                                                                                                                         
-      - sensor.power_production_normal                                                                                                                                                                      
-      - sensor.power_production_phase_l1                                                                                                                                                                    
-      - sensor.power_production_phase_l2                                                                                                                                                                    
-      - sensor.power_production_phase_l3                                                                                                                                                                    
-      - sensor.voltage_phase_l2                                                                                                                                                                             
-      - sensor.voltage_phase_l3                                                                                                                                                                             
-      - sensor.voltage_sags_phase_l2                                                                                                                                                                        
-      - sensor.voltage_sags_phase_l3                                                                                                                                                                        
-      - sensor.voltage_swells_phase_l2                                                                                                                                                                      
-      - sensor.voltage_swells_phase_l3
-      - sensor.shelly_1pm_608eea_energy
-      - sensor.shelly_1pm_608eea_power
-      - sensor.shelly_plug_s_0417ec_energy
-      - sensor.shelly_plug_s_0417ec_power
-      - sensor.shelly_plug_s_7ae6df_energy
-      - sensor.shelly_plug_s_7ae6df_power
-      - sensor.shelly_plug_s_79d7e8_energy
-      - sensor.shelly_plug_s_79d7e8_power
-      - sensor.shelly_ht_b89774_temperature
-      - sensor.shelly_ht_b89774_humidity
-      - sensor.shelly_ht_b8954a_temperature
-      - sensor.shelly_ht_b8954a_humidity
-      - sensor.dsmr_meter_stats_electricity_tariff                                                                                                                                                                                                                            
-      - sensor.dsmr_consumption_gas_delivered                                                                                                                                                                                                                                 
-      - sensor.dsmr_consumption_gas_currently_delivered                                                                                                                                                                                                                       
-      - sensor.dsmr_consumption_gas_read_at                                                                                                                                                                                                                                   
-      - sensor.dsmr_day_consumption_electricity1                                                                                                                                                                                                                              
-      - sensor.dsmr_day_consumption_electricity2                                                                                                                                                                                                                              
-      - sensor.dsmr_day_consumption_electricity1_cost                                                                                                                                                                                                                         
-      - sensor.dsmr_day_consumption_electricity2_cost                                                                                                                                                                                                                         
-      - sensor.dsmr_day_consumption_gas                                                                                                                                                                                                                                       
-      - sensor.dsmr_day_consumption_gas_cost                                                                                                                                                                                                                                  
-      - sensor.dsmr_day_consumption_total_cost                                                                                                                                                                                                                                
-      - sensor.dsmr_meter_stats_dsmr_version                                                                                                                                                                                                                                  
-      - sensor.dsmr_meter_stats_electricity_tariff                                                                                                                                                                                                                            
-      - sensor.dsmr_meter_stats_power_failure_count                                                                                                                                                                                                                           
-      - sensor.dsmr_meter_stats_long_power_failure_count                                                                                                                                                                                                                      
-      - sensor.dsmr_meter_stats_voltage_sag_count_l1                                                                                                                                                                                                                          
-      - sensor.dsmr_meter_stats_voltage_sag_count_l2                                                                                                                                                                                                                          
-      - sensor.dsmr_meter_stats_voltage_sag_count_l3                                                                                                                                                                                                                          
-      - sensor.dsmr_meter_stats_voltage_swell_count_l1                                                                                                                                                                                                                        
-      - sensor.dsmr_meter_stats_voltage_swell_count_l2                                                                                                                                                                                                                        
-      - sensor.dsmr_meter_stats_voltage_swell_count_l3                                                                                                                                                                                                                        
-      - sensor.dsmr_meter_stats_rejected_telegrams
-      - sensor.geocoded_location
-      - sensor.geocoded_location_2
-      - sensor.geocoded_location_4
-      - sensor.floors_ascended
-      - sensor.floors_ascended_2
-      - sensor.floors_descended
-      - sensor.floors_descended_2
-      - sensor.ipad_van_dennis_battery_level
-      - sensor.ipad_van_dennis_battery_state
-      - sensor.iphone_van_dennis_battery_level
-      - sensor.iphone_van_dennis_battery_level_2
-      - sensor.iphone_van_dennis_battery_level_3
-      - sensor.iphone_van_dennis_battery_state
-      - sensor.iphone_van_dennis_battery_state_2
-      - sensor.iphone_van_dennis_battery_state_3
-      - sensor.iphone_van_nicole_battery_level
-      - sensor.iphone_van_nicole_battery_state
-      - sensor.sim_1
-      - sensor.sim_1_3
-      - sensor.ssid
-      - sensor.ssid_2
-      - sensor.ssid_4
-      - sensor.steps
-      - sensor.steps_3
-      - sensor.activity
-      - sensor.activity_3
-      - sensor.average_active_pace
-      - sensor.average_active_pace_3
-      - sensor.bssid
-      - sensor.bssid_2
-      - sensor.bssid_4
-      - sensor.battery_state
-      - sensor.battery_state_2
-      - sensor.battery_state_4
-      - sensor.battery_level
-      - sensor.battery_level_2
-      - sensor.battery_level_4
-      - sensor.last_update_trigger
-      - sensor.last_update_trigger_2
-      - sensor.last_update_trigger_4
-      - sensor.distance
-      - sensor.distance_3
+      - switch
+    #  exclude:
+    #    domains:
+    #      - media_player
+    #      - device_tracker
+    #      - updates
+    #      - weather
+    #      - sun
+    #    entities:
+    #      - sensor.gas_consumption
+    #      - sensor.power_consumption_phase_l1
+    #      - sensor.power_consumption
+    #      - sensor.voltage_phase_l1
+    #      - sensor.voltage_sags_phase_l1
+    #      - sensor.voltage_swells_phase_l1
+    #      - sensor.hourly_gas_consumption
+    #      - sensor.long_power_failure_count
+    #      - sensor.power_tariff
+    #      - sensor.daily_gas
+    #      - sensor.daily_power_offpeak
+    #      - sensor.daily_power_peak
+    #      - sensor.monthly_gas
+    #      - sensor.monthly_power_offpeak
+    #      - sensor.monthly_power_peak
+    #      - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_exporting                                                                                                                                               
+    #      - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_alarm_type                                                                                                                                              
+    #      - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_alarm_level                                                                                                                                             
+    #      - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_sourcenodeid                                                                                                                                            
+    #      - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_power_management                                                                                                                                        
+    #      - sensor.iphone_van_dennis_battery_level_3                                                                                                                                                            
+    #      - sensor.iphone_van_dennis_battery_state_2                                                                                                                                                            
+    #      - sensor.power_consumption_phase_l2                                                                                                                                                                   
+    #      - sensor.power_consumption_phase_l3                                                                                                                                                                   
+    #      - sensor.power_production                                                                                                                                                                             
+    #      - sensor.power_production_low                                                                                                                                                                         
+    #      - sensor.power_production_normal                                                                                                                                                                      
+    #      - sensor.power_production_phase_l1                                                                                                                                                                    
+    #      - sensor.power_production_phase_l2                                                                                                                                                                    
+    #      - sensor.power_production_phase_l3                                                                                                                                                                    
+    #      - sensor.voltage_phase_l2                                                                                                                                                                             
+    #      - sensor.voltage_phase_l3                                                                                                                                                                             
+    #      - sensor.voltage_sags_phase_l2                                                                                                                                                                        
+    #      - sensor.voltage_sags_phase_l3                                                                                                                                                                        
+    #      - sensor.voltage_swells_phase_l2                                                                                                                                                                      
+    #      - sensor.voltage_swells_phase_l3
+    #      - sensor.shelly_1pm_608eea_energy
+    #      - sensor.shelly_1pm_608eea_power
+    #      - sensor.shelly_plug_s_0417ec_energy
+    #      - sensor.shelly_plug_s_0417ec_power
+    #      - sensor.shelly_plug_s_7ae6df_energy
+    #      - sensor.shelly_plug_s_7ae6df_power
+    #      - sensor.shelly_plug_s_79d7e8_energy
+    #      - sensor.shelly_plug_s_79d7e8_power
+    #      - sensor.shelly_ht_b89774_temperature
+    #      - sensor.shelly_ht_b89774_humidity
+    #      - sensor.shelly_ht_b8954a_temperature
+    #      - sensor.shelly_ht_b8954a_humidity
+    #      - sensor.dsmr_meter_stats_electricity_tariff                                                                                                                                                                                                                            
+    #      - sensor.dsmr_consumption_gas_delivered                                                                                                                                                                                                                                 
+    #      - sensor.dsmr_consumption_gas_currently_delivered                                                                                                                                                                                                                       
+    #      - sensor.dsmr_consumption_gas_read_at                                                                                                                                                                                                                                   
+    #      - sensor.dsmr_day_consumption_electricity1                                                                                                                                                                                                                              
+    #      - sensor.dsmr_day_consumption_electricity2                                                                                                                                                                                                                              
+    #      - sensor.dsmr_day_consumption_electricity1_cost                                                                                                                                                                                                                         
+    #      - sensor.dsmr_day_consumption_electricity2_cost                                                                                                                                                                                                                         
+    #      - sensor.dsmr_day_consumption_gas                                                                                                                                                                                                                                       
+    #      - sensor.dsmr_day_consumption_gas_cost                                                                                                                                                                                                                                  
+    #      - sensor.dsmr_day_consumption_total_cost                                                                                                                                                                                                                                
+    #      - sensor.dsmr_meter_stats_dsmr_version                                                                                                                                                                                                                                  
+    #      - sensor.dsmr_meter_stats_electricity_tariff                                                                                                                                                                                                                            
+    #      - sensor.dsmr_meter_stats_power_failure_count                                                                                                                                                                                                                           
+    #      - sensor.dsmr_meter_stats_long_power_failure_count                                                                                                                                                                                                                      
+    #      - sensor.dsmr_meter_stats_voltage_sag_count_l1                                                                                                                                                                                                                          
+    #      - sensor.dsmr_meter_stats_voltage_sag_count_l2                                                                                                                                                                                                                          
+    #      - sensor.dsmr_meter_stats_voltage_sag_count_l3                                                                                                                                                                                                                          
+    #      - sensor.dsmr_meter_stats_voltage_swell_count_l1                                                                                                                                                                                                                        
+    #      - sensor.dsmr_meter_stats_voltage_swell_count_l2                                                                                                                                                                                                                        
+    #      - sensor.dsmr_meter_stats_voltage_swell_count_l3                                                                                                                                                                                                                        
+    #      - sensor.dsmr_meter_stats_rejected_telegrams
+    #      - sensor.geocoded_location
+    #      - sensor.geocoded_location_2
+    #      - sensor.geocoded_location_4
+    #      - sensor.floors_ascended
+    #      - sensor.floors_ascended_2
+    #      - sensor.floors_descended
+    #      - sensor.floors_descended_2
+    #      - sensor.ipad_van_dennis_battery_level
+    #      - sensor.ipad_van_dennis_battery_state
+    #      - sensor.iphone_van_dennis_battery_level
+    #      - sensor.iphone_van_dennis_battery_level_2
+    #      - sensor.iphone_van_dennis_battery_level_3
+    #      - sensor.iphone_van_dennis_battery_state
+    #      - sensor.iphone_van_dennis_battery_state_2
+    #      - sensor.iphone_van_dennis_battery_state_3
+    #      - sensor.iphone_van_nicole_battery_level
+    #      - sensor.iphone_van_nicole_battery_state
+    #      - sensor.sim_1
+    #      - sensor.sim_1_3
+    #      - sensor.ssid
+    #      - sensor.ssid_2
+    #      - sensor.ssid_4
+    #      - sensor.steps
+    #      - sensor.steps_3
+    #      - sensor.activity
+    #      - sensor.activity_3
+    #      - sensor.average_active_pace
+    #      - sensor.average_active_pace_3
+    #      - sensor.bssid
+    #      - sensor.bssid_2
+    #      - sensor.bssid_4
+    #      - sensor.battery_state
+    #      - sensor.battery_state_2
+    #      - sensor.battery_state_4
+    #      - sensor.battery_level
+    #      - sensor.battery_level_2
+    #      - sensor.battery_level_4
+    #      - sensor.last_update_trigger
+    #      - sensor.last_update_trigger_2
+    #      - sensor.last_update_trigger_4
+    #      - sensor.distance
+    #      - sensor.distance_3
