@@ -93,3 +93,4 @@ mqtt:
 wake_on_lan:
 
 media_player: !include include/media_player.yaml
+
