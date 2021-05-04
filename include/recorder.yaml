@@ -11,6 +11,8 @@
       - sensor.*_linkquality
       - sensor.*_occupancy
       - sensor.*_temperature
+      - sensor.*_light_level
+      - sensor.*_illuminance_lux
     #  exclude:
     #    domains:
     #      - media_player

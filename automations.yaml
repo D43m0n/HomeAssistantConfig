@@ -93,7 +93,8 @@
   alias: Bericht sturen als het buiten warmer is dan binnen
   trigger:
     platform: template
-    value_template: "{{ states('sensor.shelly_ht_b8954a_temperature') | float > states('sensor.shelly_ht_b89774_temperature') | float }}"
+    value_template: '{{ states(''sensor.shelly_ht_b8954a_temperature'') | float >
+      states(''sensor.shelly_ht_b89774_temperature'') | float }}'
   action:
   - data:
       message: Het is nu buiten {{ states.sensor.shelly_ht_b8954a_temperature.state
@@ -101,3 +102,13 @@
         }} graden.
       title: Buiten warmer dan binnen!
     service: notify.mobile_app_iphone_van_dennis
+- id: '1620134867197'
+  alias: Xiaomi testen
+  description: ''
+  use_blueprint:
+    path: homeassistant/motion_light.yaml
+    input:
+      motion_entity: binary_sensor.0x00158d00051ddcff_occupancy
+      light_target:
+        entity_id: light.hue_ambiance_panel_1
+      no_motion_wait: 60
