@@ -16,6 +16,8 @@ homeassistant:
   external_url: !secret external_url
   internal_url: !secret internal_url
 
+  packages: !include_dir_named packages
+
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
@@ -88,9 +90,12 @@ mqtt:
   password: !secret mqtt_password
   discovery: true
   discovery_prefix: homeassistant
-
-# required for Kodi's wake on lan:
-wake_on_lan:
+  birth_message:
+    topic: 'homeassistant/status'
+    payload: 'online'
+  will_message:
+    topic: 'homeassistant/status'
+    payload: 'offline'
 
 media_player: !include include/media_player.yaml
 

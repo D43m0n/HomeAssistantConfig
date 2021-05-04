@@ -32,14 +32,7 @@
     name: Entertainment
     #    view: true
     entities:
-      - group.mediaplayers
       - group.audio
-
-  mediaplayers:
-    name: Mediaspelers
-    #    view: false
-    entities:
-      - media_player.kodi
 
   audio:
     name: Audio apparatuur
