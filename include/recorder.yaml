@@ -2,6 +2,15 @@
   include:
     domains:
       - switch
+      - binary_sensor
+    entity_globs:
+      - sensor.battery_*
+      - sensor.*battery_level
+      - sensor.*_battery
+      - sensor.*_illuminance*
+      - sensor.*_linkquality
+      - sensor.*_occupancy
+      - sensor.*_temperature
     #  exclude:
     #    domains:
     #      - media_player

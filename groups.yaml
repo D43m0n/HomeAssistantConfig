@@ -114,6 +114,7 @@
     entities:
       - sensor.shelly_ht_b89774_battery
       - sensor.shelly_ht_b8954a_battery
+      - sensor.0x00158d00051ddcff_battery
       - sensor.dimmer_woonkamer_battery_level
       - sensor.keuken_schakelaar_battery_level
 
