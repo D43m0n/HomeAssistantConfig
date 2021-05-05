@@ -107,6 +107,8 @@
       - sensor.shelly_ht_b89774_humidity
       - sensor.shelly_ht_b8954a_temperature
       - sensor.shelly_ht_b8954a_humidity
+      - sensor.hue_motion_sensor_1_temperature
+      - sensor.0x00158d00051ddcff_temperature
 
   battery:
     name: Batterijen
