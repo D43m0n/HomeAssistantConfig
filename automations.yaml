@@ -104,7 +104,6 @@
     service: notify.mobile_app_iphone_van_dennis
 - id: '1620134867197'
   alias: Xiaomi testen
-  description: ''
   use_blueprint:
     path: homeassistant/motion_light.yaml
     input:
