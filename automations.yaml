@@ -21,7 +21,7 @@
   - entity_id: switch.shelly_plug_s_7ae6df
     service: switch.turn_off
 - id: '1590256194941'
-  alias: Waarschuwing Batterij Shelly HT Buiten
+  alias: Waarschuwing Batterij Shelly HT Werkkamer
   trigger:
   - below: '20'
     entity_id: sensor.shelly_ht_b8954a_battery
@@ -31,8 +31,8 @@
   condition: []
   action:
   - data:
-      message: De batterij van de Shelly HT Buiten heeft < 20% lading.
-      title: Batterij Shelly HT Buiten minder dan 20%
+      message: De batterij van de Shelly HT Werkkamer heeft < 20% lading.
+      title: Batterij Shelly HT Werkkamer minder dan 20%
     service: notify.mobile_app_iphone_van_dennis
 - id: '1590256760870'
   alias: Waarschuwing batterij iPhone Nicole minder dan 37%
@@ -48,7 +48,7 @@
       title: Accu iPhone van Nicole laag
     service: notify.mobile_app_iphone_van_dennis
 - id: '1590257138342'
-  alias: ' Waarschuwing Batterij Shelly HT Buiten'
+  alias: ' Waarschuwing Batterij Shelly HT Woonkamer'
   trigger:
   - below: '20'
     entity_id: sensor.shelly_ht_b89774_battery
@@ -90,17 +90,17 @@
       title: Batterij Hue Dimmer Keuken minder dan 20%
     service: notify.mobile_app_iphone_van_dennis
 - id: '1591347283396'
-  alias: Bericht sturen als het buiten warmer is dan binnen
+  alias: Bericht sturen als het op de werkkamer warmer is dan in de woonkamer
   trigger:
     platform: template
     value_template: '{{ states(''sensor.shelly_ht_b8954a_temperature'') | float >
       states(''sensor.shelly_ht_b89774_temperature'') | float }}'
   action:
   - data:
-      message: Het is nu buiten {{ states.sensor.shelly_ht_b8954a_temperature.state
-        }} graden, binnen is het nu {{ states.sensor.shelly_ht_b89774_temperature.state
+      message: Het is nu op de werkkamer {{ states.sensor.shelly_ht_b8954a_temperature.state
+        }} graden, in de woonkamer is het nu {{ states.sensor.shelly_ht_b89774_temperature.state
         }} graden.
-      title: Buiten warmer dan binnen!
+      title: Werkkamer warmer dan woonkamer!
     service: notify.mobile_app_iphone_van_dennis
 - id: '1620134867197'
   alias: Xiaomi testen
