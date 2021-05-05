@@ -1,4 +1,4 @@
-  auto_purge: true
+#  auto_purge: true
   include:
     domains:
       - switch
