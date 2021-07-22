@@ -79,7 +79,7 @@
   alias: Waarschuwing batterij Hue Dimmer Keuken
   trigger:
   - below: '20'
-    entity_id: sensor.keuken_schakelaar_battery_level
+    entity_id: sensor.dimmer_eetkamer_battery_level
     for:
       hours: 1
     platform: numeric_state

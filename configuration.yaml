@@ -53,6 +53,7 @@ influxdb:
   include:
     domains:
       - sensor
+      - binary_sensor
   exclude:
     domains:
       - zone
@@ -71,10 +72,10 @@ zone: !include include/zones.yaml
 ios:
 
 # Weather
-weather:
-  - platform: buienradar
-    name: 'Lokaal weer'
-    forecast: true
+#weather:
+#  - platform: buienradar
+#    name: 'Lokaal weer'
+#    forecast: true
 
 # Text to speech
 tts:
@@ -97,5 +98,5 @@ mqtt:
     topic: 'homeassistant/status'
     payload: 'offline'
 
-media_player: !include include/media_player.yaml
+    #media_player: !include include/media_player.yaml
 
