@@ -111,3 +111,35 @@
       light_target:
         entity_id: light.hue_ambiance_panel_1
       no_motion_wait: 60
+- id: '1627288358318'
+  alias: Buiten warmer dan werkkamer
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ states(''sensor.openweathermap_temperature'') | float > states(''sensor.shelly_ht_b8954a_temperature'')
+      | float }}'
+  condition: []
+  action:
+  - service: notify.mobile_app_iphone_van_dennis
+    data:
+      title: Buiten warmer dan op de werkkamer!
+      message: Het is nu op de werkkamer {{ states.sensor.shelly_ht_b8954a_temperature.state
+        }} graden, buiten is het {{ states.sensor.openweathermap_temperature.state
+        }} graden.
+  mode: single
+- id: '1627288708834'
+  alias: Buiten warmer dan woonkamer
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ states(''sensor.openweathermap_temperature'') | float > states(''sensor.shelly_ht_b89774_temperature'')
+      | float }}'
+  condition: []
+  action:
+  - service: notify.mobile_app_iphone_van_dennis
+    data:
+      title: Buiten warmer dan woonkamer!
+      message: Het is nu in de woonkamer {{ states.sensor.shelly_ht_b89774_temperature.state
+        }} graden, buiten is het {{ states.sensor.openweathermap_temperature.state
+        }} graden.
+  mode: single
