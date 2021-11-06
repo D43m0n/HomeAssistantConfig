@@ -1,40 +1,40 @@
   - platform: dsmr_reader
 
-  - platform: filter
-    name: "Stroomverbruik laag tarief"
-    entity_id: sensor.dsmr_reading_electricity_delivered_1
-    filters:
-      - filter: throttle
-        window_size: 10
-
-  - platform: filter
-    name: "Stroomverbruik normaal tarief"
-    entity_id: sensor.dsmr_reading_electricity_delivered_2
-    filters:
-      - filter: throttle
-        window_size: 10
-
-  - platform: filter
-    name: "Actueel stroomverbruik"
-    entity_id: sensor.dsmr_reading_electricity_currently_delivered
-    filters:
-      - filter: throttle
-        window_size: 10
-
-  - platform: filter
-    name: "Dagelijks stroomverbuik normaal tarief"
-    entity_id: sensor.dsmr_day_consumption_electricity2
-    filters:
-      - filter: throttle
-        window_size: 10
-
-  - platform: filter
-    name: "Dagelijks stroomverbuik daltarief"
-    entity_id: sensor.dsmr_day_consumption_electricity1
-    filters:
-      - filter: throttle
-        window_size: 10
-
+    #  - platform: filter
+    #    name: "Stroomverbruik laag tarief"
+    #    entity_id: sensor.dsmr_reading_electricity_delivered_1
+    #    filters:
+    #      - filter: throttle
+    #        window_size: 10
+    #
+    #  - platform: filter
+    #    name: "Stroomverbruik normaal tarief"
+    #    entity_id: sensor.dsmr_reading_electricity_delivered_2
+    #    filters:
+    #      - filter: throttle
+    #        window_size: 10
+    #
+    #  - platform: filter
+    #    name: "Actueel stroomverbruik"
+    #    entity_id: sensor.dsmr_reading_electricity_currently_delivered
+    #    filters:
+    #      - filter: throttle
+    #        window_size: 10
+    #
+    #  - platform: filter
+    #    name: "Dagelijks stroomverbuik normaal tarief"
+    #    entity_id: sensor.dsmr_day_consumption_electricity2
+    #    filters:
+    #      - filter: throttle
+    #        window_size: 10
+    #
+    #  - platform: filter
+    #    name: "Dagelijks stroomverbuik daltarief"
+    #    entity_id: sensor.dsmr_day_consumption_electricity1
+    #    filters:
+    #      - filter: throttle
+    #        window_size: 10
+    #
   - platform: mqtt
     name: "Shelly 1PM 608EEA Power"
     state_topic: "shellies/shelly1pm-608EEA/relay/0/power"
@@ -114,4 +114,4 @@
       hue_motion_sensor_1_temperature_calibrated:
         friendly_name: "Calibrated Hue Motion temperature"
         unit_of_measurement: "°C"
-        value_template: "{{ float(states('sensor.hue_motion_sensor_1_temperature')) +2 }}"
+        value_template: "{{ float(states('sensor.hue_motion_sensor_1_temperature')) + 2 | int }}"

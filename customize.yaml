@@ -58,48 +58,48 @@
   switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch:
     friendly_name: Fibaro Wall Plug
 
-  sensor.power_production:
-    hidden: true
-
-  sensor.power_production_low:
-    hidden: true
-
-  sensor.power_production_normal:
-    hidden: true
-
-  sensor.power_production_phase_l1:
-    hidden: true
-
-  sensor.power_production_phase_l2:
-    hidden: true
-
-  sensor.power_production_phase_l3:
-    hidden: true
-
-  sensor.power_consumption_phase_l2:
-    hidden: true
-
-  sensor.power_consumption_phase_l3:
-    hidden: true
-
-  sensor.voltage_phase_l2:
-    hidden: true
-
-  sensor.voltage_phase_l3:
-    hidden: true
-
-  sensor.voltage_sags_phase_l2:
-    hidden: true
-
-  sensor.voltage_sags_phase_l3:
-    hidden: true
-
-  sensor.voltage_swells_phase_l2:
-    hidden: true
-
-  sensor.voltage_swells_phase_l3:
-    hidden: true
-
+    #  sensor.power_production:
+    #    hidden: true
+    #
+    #  sensor.power_production_low:
+    #    hidden: true
+    #
+    #  sensor.power_production_normal:
+    #    hidden: true
+    #
+    #  sensor.power_production_phase_l1:
+    #    hidden: true
+    #
+    #  sensor.power_production_phase_l2:
+    #    hidden: true
+    #
+    #  sensor.power_production_phase_l3:
+    #    hidden: true
+    #
+    #  sensor.power_consumption_phase_l2:
+    #    hidden: true
+    #
+    #  sensor.power_consumption_phase_l3:
+    #    hidden: true
+    #
+    #  sensor.voltage_phase_l2:
+    #    hidden: true
+    #
+    #  sensor.voltage_phase_l3:
+    #    hidden: true
+    #
+    #  sensor.voltage_sags_phase_l2:
+    #    hidden: true
+    #
+    #  sensor.voltage_sags_phase_l3:
+    #    hidden: true
+    #
+    #  sensor.voltage_swells_phase_l2:
+    #    hidden: true
+    #
+    #  sensor.voltage_swells_phase_l3:
+    #    hidden: true
+    #
   sensor.iphone_van_dennis_battery_level_3:
     hidden: true
 

@@ -70,10 +70,10 @@
   dsmr_stroom:
     name: Slimme Meter stroomverbruik
     entities:
-      - sensor.actueel_stroomverbruik
+      - sensor.dsmr_reading_electricity_currently_delivered
       - sensor.dsmr_meter_stats_electricity_tariff
-      - sensor.stroomverbruik_normaal_tarief
-      - sensor.stroomverbruik_laag_tarief
+      - sensor.dsmr_reading_electricity_delivered_2
+      - sensor.dsmr_reading_electricity_delivered_1
 
   dsmr_gas:
     name: Slimme Meter gasverbruik
@@ -101,7 +101,11 @@
       - sensor.dsmr_meter_stats_power_failure_count
       - sensor.dsmr_meter_stats_long_power_failure_count
       - sensor.dsmr_meter_stats_voltage_sag_count_l1
+      - sensor.dsmr_meter_stats_voltage_sag_count_l2
+      - sensor.dsmr_meter_stats_voltage_sag_count_l3
       - sensor.dsmr_meter_stats_voltage_swell_count_l1
+      - sensor.dsmr_meter_stats_voltage_swell_count_l2
+      - sensor.dsmr_meter_stats_voltage_swell_count_l3
       - sensor.dsmr_meter_stats_rejected_telegrams
 
   climate:
