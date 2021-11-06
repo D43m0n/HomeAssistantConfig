@@ -143,3 +143,27 @@
         }} graden, buiten is het {{ states.sensor.openweathermap_temperature.state
         }} graden.
   mode: single
+- id: '1636216284999'
+  alias: Buitenverlichting terras aan bij zonsondergang
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+  condition: []
+  action:
+  - service: switch.turn_on
+    target:
+      entity_id: switch.shelly_1pm_e67b86
+  mode: single
+- id: '1636216499389'
+  alias: Buitenverlichting terras uit bij zonsopkomst
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+  condition: []
+  action:
+  - service: switch.turn_off
+    target:
+      entity_id: switch.shelly_1pm_e67b86
+  mode: single
