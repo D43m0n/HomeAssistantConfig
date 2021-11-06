@@ -11,7 +11,6 @@
     entities:
       - light.woonkamer
       - light.werkkamer
-      - light.aanrecht
       - light.eetkamer
 
   hue_lights:
@@ -21,17 +20,14 @@
       - light.staande_lamp
       - light.tafellamp
       - light.bronzen_lamp
-      - light.lamp_op_de_werkkamer
-      - light.aanrecht_links_2
-      - light.aanrecht_rechts_2
       - light.hue_ambiance_panel_2
       - light.kerstboom_2
       - light.kerstverlichtingslinger_2
-        #      - light.dimmable_light_1
-        #      - light.dimmable_light_1_2
-        #      - light.hue_ambiance_panel_1
-        #      - light.on_off_plug_1
-        #      - light.on_off_plug_1_2
+      - light.hue_play_1
+      - light.hue_ambiance_lamp_1
+      - light.hue_ambiance_lamp_1_2
+      - light.hue_ambiance_lamp_1_3
+      - light.hue_ambiance_lamp_1_4
 
   entertainment:
     name: Entertainment
@@ -58,8 +54,8 @@
     entities:
       - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_power
       - sensor.fibaro_system_fgwpe_f_wall_plug_gen5_energy
-      - sensor.shelly_1pm_608eea_energy
-      - sensor.shelly_1pm_608eea_power
+      - sensor.shelly_1pm_e67b86_energy
+      - sensor.shelly_1pm_e67b86_power
       - sensor.shelly_plug_s_0417ec_energy
       - sensor.shelly_plug_s_0417ec_power
       - sensor.shelly_plug_s_7ae6df_energy

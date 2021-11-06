@@ -36,13 +36,13 @@
     #        window_size: 10
     #
   - platform: mqtt
-    name: "Shelly 1PM 608EEA Power"
-    state_topic: "shellies/shelly1pm-608EEA/relay/0/power"
+    name: "Shelly 1PM E67B86 Power"
+    state_topic: "shellies/shelly1pm-E67B86/relay/0/power"
     unit_of_measurement: "Watts"
     
   - platform: mqtt
-    name: "Shelly 1PM 608EEA Energy"
-    state_topic: "shellies/shelly1pm-608EEA/relay/0/energy" 
+    name: "Shelly 1PM E67B86 Energy"
+    state_topic: "shellies/shelly1pm-E67B86/relay/0/energy" 
     value_template: "{{ value | float * 0.000017 }}"
     unit_of_measurement: "kWh"
 
