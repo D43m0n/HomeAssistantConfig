@@ -11,6 +11,8 @@
       - sensor.*_linkquality
       - sensor.*_occupancy
       - sensor.*_temperature
+      - sensor.*_temperature_calibrated
       - sensor.*_humidity
       - sensor.*_light_level
       - sensor.*_illuminance_lux
+      - sensor.*_pressure

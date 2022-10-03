@@ -21,9 +21,9 @@
   - entity_id: switch.shelly_plug_s_7ae6df
     service: switch.turn_off
 - id: '1590256194941'
-  alias: Waarschuwing Batterij Shelly HT Werkkamer
+  alias: Waarschuwing Batterij Shelly HT Werkkamer < 60%
   trigger:
-  - below: '20'
+  - below: '60'
     entity_id: sensor.shelly_ht_b8954a_battery
     for:
       hours: 8
@@ -31,8 +31,8 @@
   condition: []
   action:
   - data:
-      message: De batterij van de Shelly HT Werkkamer heeft < 20% lading.
-      title: Batterij Shelly HT Werkkamer minder dan 20%
+      message: De batterij van de Shelly HT Werkkamer heeft < 60% lading.
+      title: Batterij Shelly HT Werkkamer minder dan 60%
     service: notify.mobile_app_iphone_van_dennis
 - id: '1590256760870'
   alias: Waarschuwing batterij iPhone Nicole minder dan 37%
@@ -48,9 +48,9 @@
       title: Accu iPhone van Nicole laag
     service: notify.mobile_app_iphone_van_dennis
 - id: '1590257138342'
-  alias: ' Waarschuwing Batterij Shelly HT Woonkamer'
+  alias: ' Waarschuwing Batterij Shelly HT Woonkamer < 60%'
   trigger:
-  - below: '20'
+  - below: '60'
     entity_id: sensor.shelly_ht_b89774_battery
     for:
       hours: 8
@@ -58,13 +58,13 @@
   condition: []
   action:
   - data:
-      message: De batterij van de Shelly HT Woonkamer heeft < 20% lading.
-      title: Batterij Shelly HT Woonkamer minder dan 20%
+      message: De batterij van de Shelly HT Woonkamer heeft < 60% lading.
+      title: Batterij Shelly HT Woonkamer minder dan 60%
     service: notify.mobile_app_iphone_van_dennis
 - id: '1590257621165'
-  alias: Waarschuwing batterij Hue Dimmer Woonkamer
+  alias: Waarschuwing batterij Hue Dimmer Woonkamer < 40%
   trigger:
-  - below: '20'
+  - below: '40'
     entity_id: sensor.dimmer_woonkamer_battery_level
     for:
       hours: 1
@@ -72,13 +72,13 @@
   condition: []
   action:
   - data:
-      message: De batterij van de Hue Dimmer Woonkamer heeft < 20% lading.
-      title: Batterij Hue Dimmer Woonkamer minder dan 20%
+      message: De batterij van de Hue Dimmer Woonkamer heeft < 40% lading.
+      title: Batterij Hue Dimmer Woonkamer minder dan 40%
     service: notify.mobile_app_iphone_van_dennis
 - id: '1590257764955'
-  alias: Waarschuwing batterij Hue Dimmer Keuken
+  alias: Waarschuwing batterij Hue Dimmer Werkkamer < 40%
   trigger:
-  - below: '20'
+  - below: '40'
     entity_id: sensor.dimmer_eetkamer_battery_level
     for:
       hours: 1
@@ -86,8 +86,8 @@
   condition: []
   action:
   - data:
-      message: De batterij van de Hue Dimmer Keuken heeft < 20% lading.
-      title: Batterij Hue Dimmer Keuken minder dan 20%
+      message: De batterij van de Hue Dimmer Werkkamer heeft < 40% lading.
+      title: Batterij Hue Dimmer Werkkamer minder dan 40%
     service: notify.mobile_app_iphone_van_dennis
 - id: '1591347283396'
   alias: Bericht sturen als het op de werkkamer warmer is dan in de woonkamer
@@ -166,4 +166,43 @@
   - service: switch.turn_off
     target:
       entity_id: switch.shelly_1pm_e67b86
+  mode: single
+- id: '1639747382064'
+  alias: Waarschuwing battery Aqara bewegingsensor < 60%
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.0x00158d00051ddcff_battery
+    below: '60'
+    for:
+      hours: 8
+      minutes: 0
+      seconds: 0
+      milliseconds: 0
+  condition: []
+  action:
+  - service: notify.mobile_app_iphone_van_dennis
+    data:
+      message: De batterij van de Aqara bewegingsensor heeft < 60% lading.
+      title: Batterij Aqara bewegingsensor minder dan 60%
+  mode: single
+- id: '1639747538163'
+  alias: Waarschuwing batterij Aqara klimaatsensor werkkamer < 60%
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.0x00158d0007df9809_battery
+    below: '60'
+    for:
+      hours: 8
+      minutes: 0
+      seconds: 0
+      milliseconds: 0
+  condition: []
+  action:
+  - service: notify.mobile_app_iphone_van_dennis
+    data:
+      message: De batterij van de Aqara klimaatsensor op de werkkamer heeft < 60%
+        lading.
+      title: Batterij klimaatsensor werkkamer minder dan 60%
   mode: single

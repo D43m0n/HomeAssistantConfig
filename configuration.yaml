@@ -35,7 +35,7 @@ http:
 # Discover some devices automatically
 discovery:
 
-switch: !include include/switches.yaml
+#switch: !include include/switches.yaml
   
 sensor: !include include/sensors.yaml
 
@@ -43,8 +43,8 @@ utility_meter: !include include/utility_meters.yaml
 
 recorder: !include include/recorder.yaml
 
-zwave:
-  usb_path: /dev/ttyACM0
+#zwave:
+#  usb_path: /dev/ttyACM0
 
 influxdb:
   host: influxdb.docker_default
@@ -97,6 +97,9 @@ mqtt:
   will_message:
     topic: 'homeassistant/status'
     payload: 'offline'
+  switch: !include include/mqtt_switch.yaml
+  sensor: !include include/mqtt_sensor.yaml
+  #  sensor: !include include/mqtt_sensor.yaml
 
     #media_player: !include include/media_player.yaml
 

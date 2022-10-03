@@ -115,6 +115,9 @@
       - sensor.hue_motion_sensor_1_temperature
       - sensor.hue_motion_sensor_1_temperature_calibrated
       - sensor.0x00158d00051ddcff_temperature
+      - sensor.xiaomi_temp_humid_1_humidity
+      - sensor.xiaomi_temp_humid_1_temperature
+      - sensor.xiaomi_temp_humid_1_pressure
 
   battery:
     name: Batterijen
@@ -125,6 +128,7 @@
       - sensor.0x00158d00051ddcff_battery
       - sensor.dimmer_woonkamer_battery_level
       - sensor.dimmer_eetkamer_battery_level
+      - sensor.xiaomi_temp_humid_1_battery
 
   weather:
     name: Weer
