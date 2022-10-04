@@ -1,0 +1,33 @@
+  - platform: mqtt
+    name: "Shelly 1PM E67B86"
+    state_topic: "shellies/shelly1pm-E67B86/relay/0"
+    command_topic: "shellies/shelly1pm-E67B86/relay/0/command"
+    payload_on: "on"
+    payload_off: "off"
+    retain: true
+
+  - platform: mqtt
+    name: "Shelly Plug S 7AE6DF"
+    state_topic: "shellies/shellyplug-s-7AE6DF/relay/0"
+    command_topic: "shellies/shellyplug-s-7AE6DF/relay/0/command"
+    payload_on: "on"
+    payload_off: "off"
+    retain: true
+
+  - platform: mqtt
+    name: "Shelly Plug S 0417EC"
+    state_topic: "shellies/shellyplug-s-0417EC/relay/0"
+    command_topic: "shellies/shellyplug-s-0417EC/relay/0/command"
+    payload_on: "on"
+    payload_off: "off"
+    retain: true
+
+  - platform: mqtt
+    name: "Shelly Plug S 79D7E8"
+    state_topic: "shellies/shellyplug-s-79D7E8/relay/0"
+    command_topic: "shellies/shellyplug-s-79D7E8/relay/0/command"
+    payload_on: "on"
+    payload_off: "off"
+    retain: true
+
+
